@@ -1,4 +1,6 @@
 class WelcomeController < ApplicationController
+  TWITTER_FRIENDS ||= TWITTER_CLIENT.friends.to_a
+
   def index
     @tweeps = get_my_tweeps
   end
@@ -6,7 +8,6 @@ class WelcomeController < ApplicationController
   private
 
   def get_my_tweeps
-    friends = TWITTER_CLIENT.friends.to_a
-    friends.sort_by { |friend| friend.followers_count }.reverse!
+    TWITTER_FRIENDS.sort_by { |friend| friend.followers_count }.reverse!
   end
 end
