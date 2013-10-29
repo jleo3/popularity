@@ -6,3 +6,5 @@ TWITTER_CLIENT = Twitter::REST::Client.new do |config|
 
   config.connection_options[:request] = {:open_timeout=>10, :timeout=>20}
 end
+
+TWITTER_FRIENDS = TWITTER_CLIENT.friends.to_a
