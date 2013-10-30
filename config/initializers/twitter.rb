@@ -4,7 +4,6 @@ TWITTER_CLIENT = Twitter::REST::Client.new do |config|
   config.access_token = "16355050-NjTXfjcrZ32BWsVxekvW11K4ch2ETsGh0acXZS5Na"
   config.access_token_secret = "fUmojD81aCuahbb2Cm3aWIprJzwHydbp9pkRL5OzwfLBf"
 
-  config.connection_options[:request] = {:open_timeout=>10, :timeout=>20}
+  config.connection_options[:request] = {:open_timeout=>20, :timeout=>40}
 end
 
-TWITTER_FRIENDS = TWITTER_CLIENT.friends.to_a
