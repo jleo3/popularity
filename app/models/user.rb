@@ -9,7 +9,9 @@ class User < ActiveRecord::Base
    where(auth.slice(:provider, :uid)).first_or_create do |user|
       user.provider = auth.provider
       user.uid = auth.uid
-      user.username = auth.info.username
+      user.username = auth.info.nickname
+      user.token = auth.credentials.token
+      user.token_secret = auth.credentials.secret
     end
   end
 
@@ -25,6 +27,10 @@ class User < ActiveRecord::Base
   end
 
   def password_required?
+    super && provider.blank?
+  end
+
+  def email_required?
     super && provider.blank?
   end
 end
