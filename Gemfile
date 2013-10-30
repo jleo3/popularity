@@ -6,6 +6,7 @@ gem 'twitter', '5.0.0.rc1'
 gem 'devise'
 gem 'omniauth-twitter'
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'pry'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
