@@ -22,8 +22,8 @@ Popularity::Application.configure do
   # Raise an error on page load if there are pending migrations
   config.active_record.migration_error = :page_load
 
-  # Devise told me to do this:
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  # devise made me do it
+   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
