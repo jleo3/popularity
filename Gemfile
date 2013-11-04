@@ -13,6 +13,7 @@ gem 'binding_of_caller'
 group :production do
   gem 'rails_12factor'
   gem 'pg'
+  gem 'unicorn'
 end
 
 # Use sqlite3 as the database for Active Record
@@ -48,10 +49,6 @@ group :doc do
 end
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# Use unicorn as the app server
-# gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
