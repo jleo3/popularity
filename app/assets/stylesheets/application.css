@@ -10,8 +10,8 @@
  *
  *= require_self
  *= require_tree .
- *=require bootstrap
-*/
+ *= require bootstrap
+ */
 .form-signin
 {
   max-width: 330px;

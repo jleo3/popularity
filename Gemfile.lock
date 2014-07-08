@@ -192,6 +192,6 @@ DEPENDENCIES
   sdoc
   sqlite3
   turbolinks
-  twitter (= 5.0.0.rc1)
+  twitter
   uglifier (>= 1.3.0)
   unicorn
